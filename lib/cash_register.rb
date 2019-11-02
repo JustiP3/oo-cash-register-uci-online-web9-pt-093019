@@ -33,7 +33,7 @@ end #end of if block
 end # end of method apply_discount
 
 def items
-basket.values
+basket.keys
 end # end of items method
 
 
