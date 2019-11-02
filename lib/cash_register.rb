@@ -19,7 +19,6 @@ end
 def add_item(title, price, qty=1)
   @total += price*qty
   @basket=title,qty
-  binding.pry
 end
 
 def apply_discount
