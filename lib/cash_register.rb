@@ -1,3 +1,4 @@
+require 'pry'
 class CashRegister
 
 attr_accessor :total, :discount
@@ -20,6 +21,7 @@ end
 def add_item(title, price, qty=1) #wtf are we doing with title ??
   @total += price*qty
   @basket=title,qty
+  binding.pry
 end
 
 def apply_discount
