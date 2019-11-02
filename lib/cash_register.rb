@@ -32,6 +32,10 @@ else
 end #end of if block
 end # end of method apply_discount
 
+def items
+basket.values
+end # end of items method
+
 
 
 
