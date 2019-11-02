@@ -5,7 +5,7 @@ attr_accessor :total, :discount
 attr_reader :basket
 
 def basket=(key,value)
-  @basket[key] = value
+  @basket[:key] = value
 end
 
 def initialize(emp_disc=0)
