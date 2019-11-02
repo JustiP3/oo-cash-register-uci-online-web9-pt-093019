@@ -4,14 +4,14 @@ class CashRegister
 attr_accessor :total, :discount
 attr_reader :basket
 
-def basket=(key,value)
-  @basket[:key] = value
+def basket=(title,value)
+  @basket << [title, value]
 end
 
 def initialize(emp_disc=0)
   @total = 0.0
   @discount = emp_disc
-  @basket = {}
+  @basket = []
 end
 
 
@@ -33,7 +33,7 @@ end #end of if block
 end # end of method apply_discount
 
 def items
-basket.select {|x| x.class == String}
+
 end # end of items method
 
 
