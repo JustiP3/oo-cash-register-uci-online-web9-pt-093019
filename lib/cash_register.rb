@@ -1,7 +1,7 @@
 require 'pry'
 class CashRegister
 
-attr_accessor :total, :discount
+attr_accessor :total, :discount, :last_trans
 attr_reader :basket
 
 def basket=(title,value)
@@ -17,7 +17,9 @@ end
 
 
 def add_item(title, price, qty=1)
+  last_trans = [title, price, qty]
   @total += price*qty
+
   if @basket.detect {|x| x==title}
   @basket << [title, qty]
   else
