@@ -65,7 +65,7 @@ def void_last_transaction
 index = @basket.index {|item| item.key?(last_trans[0])}
 @basket[index][title] -= qty
 
-end #end of void transaction method 
+end #end of void transaction method
 
 
 end # end of class cash register
