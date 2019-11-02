@@ -22,9 +22,9 @@ def add_item(title, price, qty=1)
 
 
   index = @basket.index{|item|item[0] == title}
-  if index 
+  if index
     @basket[index].collect {|title_or_value| title_or_value += qty if title_or_value.class != String }
-  else 
+  else
     @basket << [title, qty]
   end #end of if block
 
