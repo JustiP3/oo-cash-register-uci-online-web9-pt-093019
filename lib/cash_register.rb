@@ -1,12 +1,21 @@
 class CashRegister
 
-attr_accessor :total, :discount, :basket
+attr_accessor :total, :discount
 
 
 def initialize(emp_disc=0)
   @total = 0.0
   @discount = emp_disc
+  @basket = {}
 end
+
+def basket=(key,value)
+  @basket[key] = value 
+end 
+
+def basket 
+  @basket
+end 
 
 def add_item(title, price, qty=1) #wtf are we doing with title ??
   @total += price*qty
