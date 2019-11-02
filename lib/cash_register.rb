@@ -4,26 +4,28 @@ class CashRegister
 attr_accessor :total, :discount, :last_trans
 attr_reader :basket
 
-def basket=(title,value)
-  @basket << [title, value]
+def basket=(title,qty)
+  @basket << [title, qty]
 end
 
 def initialize(emp_disc=0)
   @total = 0.0
   @discount = emp_disc
-  @basket = []
+  @basket = [] #nested array of [item_title , qty] pairs
 end
 
 
 
 def add_item(title, price, qty=1)
-  last_trans = [title, price, qty]
+  @last_trans = [title, price, qty]
   @total += price*qty
 
-  if @basket.detect {|x| x==title}
-  @basket << [title, qty]
-  else
-  @basket[title] += qty
+
+  index = @basket.index{|item|item[0] == title}
+  if index 
+    @basket[index].collect {|title_or_value| title_or_value += qty if title_or_value.class != String }
+  else 
+    @basket << [title, qty]
   end #end of if block
 
 end # end of add item method
