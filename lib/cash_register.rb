@@ -11,7 +11,7 @@ end
 def initialize(emp_disc=0)
   @total = 0.0
   @discount = emp_disc
-  @basket = [] #array of {item_title => qty} hashes 
+  @basket = [] #array of {item_title => qty} hashes
 end
 
 
