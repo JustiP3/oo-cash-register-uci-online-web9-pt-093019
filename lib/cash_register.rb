@@ -63,7 +63,7 @@ def void_last_transaction
 
 #remove from basket
 index = @basket.index {|item| item.key?(last_trans[0])}
-@basket[index][title] -= qty
+@basket[index][last_trans[0]] -= qty
 
 end #end of void transaction method
 
