@@ -57,9 +57,15 @@ items
 end # end of items method
 
 def void_last_transaction
+  #  @last_trans = [title, last_price, qty] (for reference)
+
 @total -= @last_trans[1]
-#remove from basket, need to add code
-end
+
+#remove from basket
+index = @basket.index {|item| item.key?(last_trans[0])}
+@basket[index][title] -= qty
+
+end #end of void transaction method 
 
 
 end # end of class cash register
