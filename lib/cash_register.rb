@@ -56,7 +56,10 @@ end #end of basket each block
 items
 end # end of items method
 
-
+def void_last_transaction
+@total -= @last_trans[1]
+#remove from basket
+end
 
 
 end # end of class cash register
