@@ -32,7 +32,7 @@ def add_item(title, price, qty=1)
 end # end of add item method
 
 def apply_discount
-  if @discount != 0
+  if discount != 0
 new_total = (@total * (100-@discount) / 100)
 #discount is an integer representing a percentage
 @total = new_total
