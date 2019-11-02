@@ -33,7 +33,7 @@ end #end of if block
 end # end of method apply_discount
 
 def items
-basket.keys
+basket.select {|x| x.class = String}
 end # end of items method
 
 
