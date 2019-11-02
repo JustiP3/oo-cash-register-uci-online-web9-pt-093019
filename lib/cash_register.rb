@@ -23,6 +23,7 @@ def add_item(title, price, qty=1)
 
 
   index = @basket.index{|item|item[0] == title}
+  #if the item already exists, increment the quantity. Otherwise add item.
   if index
     @basket[index].collect {|title_or_value| title_or_value += qty if title_or_value.class != String }
   else
