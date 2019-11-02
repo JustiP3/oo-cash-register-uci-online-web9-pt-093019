@@ -59,10 +59,10 @@ end # end of items method
 def void_last_transaction
   #  @last_trans = [title, last_price, qty] (for reference)
 
-@total -= last_trans[1]
+total -= @last_trans[1]
 
 #remove from basket
-index = basket.index {|item| item.key?(last_trans[0])}
+index = @basket.index {|item| item.key?(last_trans[0])}
 @basket[index][last_trans[0]] -= last_trans[2]
 
 end #end of void transaction method
