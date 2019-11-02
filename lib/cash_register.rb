@@ -21,7 +21,7 @@ def add_item(title, price, qty=1)
   @last_trans = [title, last_price, qty]
   @total += last_price
 
-  index = @basket.index {|item| item.key?(title)}
+  index = basket.index {|item| item.key?(title)}
   #if the item already exists, increment the quantity. Otherwise add item.
   if index
     @basket[index][title] += qty
