@@ -5,13 +5,13 @@ attr_accessor :total, :discount, :last_trans
 attr_reader :basket
 
 def basket=(title,qty)
-  @basket << [title, qty]
+  @basket << {title => qty}
 end
 
 def initialize(emp_disc=0)
   @total = 0.0
   @discount = emp_disc
-  @basket = [] #nested array of [item_title , qty] pairs
+  @basket = [] #array of {item_title => qty} hashes 
 end
 
 
