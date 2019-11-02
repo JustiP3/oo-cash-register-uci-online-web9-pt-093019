@@ -17,8 +17,9 @@ end
 
 
 def add_item(title, price, qty=1)
-  @last_trans = [title, price, qty]
-  @total += price*qty
+  last_price = price*qty
+  @last_trans = [title, last_price, qty]
+  @total += last_price
 
 
   index = @basket.index{|item|item[0] == title}
