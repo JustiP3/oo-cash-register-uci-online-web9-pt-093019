@@ -45,8 +45,12 @@ end # end of method apply_discount
 def items
 items = []
 @basket.each do |pairs|
-  pairs.each do |title_or_qty|
-    items << title_or_qty if title_or_qty.class == String
+  pairs.each do |title, qty|
+    i = 0
+    while i < qty
+      items << title
+      i += 1
+    end #end of while loop
   end #end of pairs each block
 end #end of basket each block
 items
