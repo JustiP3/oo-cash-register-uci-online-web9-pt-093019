@@ -2,7 +2,11 @@ require 'pry'
 class CashRegister
 
 attr_accessor :total, :discount
+attr_reader :basket
 
+def basket=(key,value)
+  @basket[key] = value
+end
 
 def initialize(emp_disc=0)
   @total = 0.0
@@ -10,13 +14,8 @@ def initialize(emp_disc=0)
   @basket = {}
 end
 
-def basket=(key,value)
-  @basket[key] = value
-end
 
-def basket
-  @basket
-end
+
 
 def add_item(title, price, qty=1) #wtf are we doing with title ??
   @total += price*qty
