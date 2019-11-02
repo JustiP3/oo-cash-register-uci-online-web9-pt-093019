@@ -58,7 +58,7 @@ end # end of items method
 
 def void_last_transaction
 @total -= @last_trans[1]
-#remove from basket
+#remove from basket, need to add code 
 end
 
 
