@@ -10,12 +10,12 @@ def initialize(emp_disc=0)
 end
 
 def basket=(key,value)
-  @basket[key] = value 
-end 
+  @basket[key] = value
+end
 
-def basket 
+def basket
   @basket
-end 
+end
 
 def add_item(title, price, qty=1) #wtf are we doing with title ??
   @total += price*qty
