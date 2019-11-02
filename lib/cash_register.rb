@@ -10,7 +10,7 @@ end
 
 def add_item(title, price, qty=1) #wtf are we doing with title ??
   @total += price*qty
-  @basket[title] = qty 
+  @basket[title] = qty
 end
 
 def apply_discount
