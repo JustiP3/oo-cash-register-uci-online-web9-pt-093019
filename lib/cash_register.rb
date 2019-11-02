@@ -45,7 +45,11 @@ end # end of method apply_discount
 
 def items
 items = []
-@basket.each {|pairs|pairs.each {|title_or_qty|items << title_or_qty if title_or_qty.class == String}}
+@basket.each do |pairs|
+  pairs.each do |title_or_qty|
+    items << title_or_qty if title_or_qty.class == String
+  end #end of pairs each block
+end #end of basket each block
 items
 end # end of items method
 
