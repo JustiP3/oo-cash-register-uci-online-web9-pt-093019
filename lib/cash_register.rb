@@ -19,12 +19,12 @@ end
 def add_item(title, price, qty=1)
   @total += price*qty
   if @basket.detect {|x| x==title}
-  @basket << [title, qty]  
+  @basket << [title, qty]
   else
   @basket[title] += qty
-  end #end of if block 
+  end #end of if block
 
-end # end of add item method 
+end # end of add item method
 
 def apply_discount
   if @discount != 0
