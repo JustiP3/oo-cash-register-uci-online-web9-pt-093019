@@ -25,7 +25,7 @@ def add_item(title, price, qty=1)
   index = @basket.index{|item|item[0] == title}
   #if the item already exists, increment the quantity. Otherwise add item.
   if index
-    @basket[index].collect {|title_or_value| title_or_value += qty if title_or_value.class != String }
+    @basket[index].collect {|title_or_qty| title_or_qty += qty if title_or_qty.class != String }
   else
     @basket << [title, qty]
   end #end of if block
@@ -44,7 +44,8 @@ end #end of if block
 end # end of method apply_discount
 
 def items
-
+items = []
+@basket.each {|title_or_qty| items << title_or_qty if title_or_qty.class == String} 
 end # end of items method
 
 
