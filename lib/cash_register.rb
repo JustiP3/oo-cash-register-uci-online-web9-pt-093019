@@ -24,7 +24,7 @@ def add_item(title, price, qty=1)
   index = @basket.index {|item| item.key?(title)}
   #if the item already exists, increment the quantity. Otherwise add item.
   if index
-    @basket[index][title] += qty 
+    @basket[index][title] += qty
   else
     @basket << {title => qty}
   end #end of if block
